@@ -1,7 +1,9 @@
 package com.example.restaurantservice.dto;
 
 public record AuthorizationEmployee(
-        String phoneNumber,
-        String password
+
+        String password,
+        String email,
+        String phoneNumber
 ) {
 }

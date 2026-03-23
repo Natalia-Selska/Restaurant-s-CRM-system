@@ -2,7 +2,6 @@ package com.example.restaurantservice.controller;
 
 import com.example.restaurantservice.dto.AddEmployeeDto;
 import com.example.restaurantservice.dto.AuthorizationEmployee;
-import com.example.restaurantservice.dto.RegistrationEmployeeDto;
 import com.example.restaurantservice.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,8 +22,8 @@ public class EmployeeController {
     }
 
     @PostMapping("/registration")
-    public void registration(@RequestBody RegistrationEmployeeDto registrationEmployeeDto) {
-        employeeService.registration(registrationEmployeeDto);
+    public void registration(@RequestBody AddEmployeeDto addEmployeeDto) {
+        employeeService.registration(addEmployeeDto);
     }
 
     @PostMapping("/authorization")

@@ -11,7 +11,9 @@ public record AddEmployeeDto(
         LocalDate birthDate,
         UUID discountId,
         BigDecimal salary,
-        UUID roleId
+        UUID roleId,
+        String email,
+        String password
 
 ) {
 }

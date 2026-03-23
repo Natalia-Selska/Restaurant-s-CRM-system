@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -19,5 +20,7 @@ public class Restaurant {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String address;
+    private List<Employee> employeeList;
+    private List<Customer> customerList;
 
 }

@@ -1,6 +1,7 @@
 package com.example.restaurantservice.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,8 @@ public class Person {
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
+    @Email
+    private String email;
 
     @ManyToOne
     @JoinColumn(name = "discount_id")
